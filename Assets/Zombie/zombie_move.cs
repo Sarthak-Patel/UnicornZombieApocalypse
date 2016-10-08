@@ -3,10 +3,10 @@ using System.Collections;
 
 public class zombie_move : MonoBehaviour {
 	
-	public Transform target;
 	public float speed;
 
-	void Update() {		
+	void Update() {
+		Transform target = GameObject.Find("Main Camera").GetComponent<Transform>();
 		// emulates player moving past zombie
 		Vector3 direction = (new Vector3(target.forward.x, 0, target.forward.z))*speed;
 		transform.position = transform.position - direction;

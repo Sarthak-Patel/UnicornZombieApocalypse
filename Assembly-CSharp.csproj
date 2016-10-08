@@ -92,6 +92,9 @@
      <Compile Include="Assets\GoogleVR\Scripts\UI\IGvrGazeResponder.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrFPS.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrIntent.cs" />
+     <Compile Include="Assets\MainScene\Quit.cs" />
+     <Compile Include="Assets\MainScene\QuitGame.cs" />
+     <Compile Include="Assets\MainScene\StartGame.cs" />
      <Compile Include="Assets\Zombie\zombie_move.cs" />
      <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
      <None Include="Assets\GoogleVR\Legacy\Resources\UnlitTexture.shader" />

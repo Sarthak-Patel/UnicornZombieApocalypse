@@ -26,7 +26,7 @@ public class spawner : MonoBehaviour {
     {
         x = Random.Range(-100, 100);
         z = Random.Range(-100, 100);
-       Instantiate(Zombie, new Vector3(x, 2, z), Quaternion.identity);
+       Instantiate(Zombie, new Vector3(x, 3, z), Quaternion.identity);
     }
 }
 /**

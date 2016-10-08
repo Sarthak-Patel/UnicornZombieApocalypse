@@ -8,7 +8,7 @@ public class zombie_move : MonoBehaviour {
 
 	void Update() {		
 		// emulates player moving past zombie
-		Vector3 direction = speed*(target.forward+target.right);
+		Vector3 direction = (new Vector3(target.forward.x, 0, target.forward.z))*speed;
 		transform.position = transform.position - direction;
 
 		// face player

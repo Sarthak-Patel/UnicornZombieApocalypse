@@ -14,7 +14,7 @@ public class DestroyCollision : MonoBehaviour {
         GetComponent<AudioSource>().clip = nay;
         count = 0;
         countText.text = "Count: " + count.ToString();
-        countText2.text = "Count: " + count.ToString();
+        countText2.text = "Final Score: " + count.ToString();
     }
 	void OnCollisionEnter(Collision col)
     {
@@ -23,7 +23,7 @@ public class DestroyCollision : MonoBehaviour {
             Destroy(col.gameObject);
             count = count + 1;
             countText.text = "Count: " + count.ToString ();
-            countText2.text = "Count: " + count.ToString();
+            countText2.text = "Final Score: " + count.ToString();
             GetComponent<AudioSource>().Play();
         }
     }
@@ -32,6 +32,6 @@ public class DestroyCollision : MonoBehaviour {
     {
         count = 0;
         countText.text = "Count: " + count.ToString();
-        countText2.text = "Count: " + count.ToString();
+        countText2.text = "Final Score: " + count.ToString();
     }
 }

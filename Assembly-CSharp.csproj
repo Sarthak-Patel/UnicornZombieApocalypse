@@ -95,7 +95,10 @@
      <Compile Include="Assets\MainScene\Quit.cs" />
      <Compile Include="Assets\MainScene\QuitGame.cs" />
      <Compile Include="Assets\MainScene\StartGame.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\Zombie\spawner.cs" />
+=======
+>>>>>>> b943b8bbed7c5b997e95119d9ef8e4f926bbf063
      <Compile Include="Assets\Zombie\zombie_move.cs" />
      <Compile Include="Assets\scripts\MagnetSensor.cs" />
      <Compile Include="Assets\scripts\ResetListener.cs" />

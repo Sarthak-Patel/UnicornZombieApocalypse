@@ -6,7 +6,6 @@ public class zombie_move : MonoBehaviour {
 	public Transform target;
 	public float speed;
 
-
 	void Update() {		
 		// emulates player moving past zombie
 		Vector3 direction = speed*(target.forward+target.right);

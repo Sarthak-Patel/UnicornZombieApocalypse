@@ -14,7 +14,6 @@ public class zombie_move : MonoBehaviour {
 
 		// spawn randomly
 		const int HEIGHT = 2;
-		const int HEIGHT = 3;
 		int x = Random.Range(300,500);
 		int z = Random.Range(300,500);
 

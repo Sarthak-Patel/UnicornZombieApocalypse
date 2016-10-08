@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Button))]
 public class QuitGame : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public Text StartTheGame; // add an image as child to your button object and set its image type to Filled. Assign it to this field in inspector.
+    public Text QuitTheGame; // add an image as child to your button object and set its image type to Filled. Assign it to this field in inspector.
     public bool isEntered = false;
     RectTransform rt;
     Button _button;
@@ -30,6 +30,7 @@ public class QuitGame : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             if (timeElapsed >= GazeActivationTime)
             {
                 timeElapsed = 0;
+                _button.onClick.Invoke();
                 Application.Quit();
                 isEntered = false;
             }

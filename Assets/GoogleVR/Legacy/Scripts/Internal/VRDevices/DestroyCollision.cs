@@ -5,9 +5,12 @@ using System.Collections;
 public class DestroyCollision : MonoBehaviour {
     public Text countText;
     private int count;
+    public AudioClip nay;
 
     void Start()
     {
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = nay;
         count = 0;
         countText.text = "Count: " + count.ToString();
     }
@@ -18,6 +21,7 @@ public class DestroyCollision : MonoBehaviour {
             Destroy(col.gameObject);
             count = count + 1;
             countText.text = "Count: " + count.ToString ();
+            GetComponent<AudioSource>().Play();
         }
     }
 }

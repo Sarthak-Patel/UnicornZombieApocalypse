@@ -20,7 +20,7 @@ public class spawner : MonoBehaviour {
 		for (int i = 0; i < 4; i++) {
 			x = Random.Range(-100,100);
 			z = Random.Range(-100,100);
-			Instantiate(Zombie, new Vector3(x,2,100), Quaternion.identity);
+			Instantiate(Zombie, new Vector3(x,2,z), Quaternion.identity);
 		}
 
 		// wait time in between each spawn wave

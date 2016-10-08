@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using System;
 
 public class DestroyCollision : MonoBehaviour {
     public Text countText;
@@ -18,7 +18,7 @@ public class DestroyCollision : MonoBehaviour {
     }
 	void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.name == "Zombie")
+        if(col.gameObject.name == "Zombie(Clone)")
         {
             Destroy(col.gameObject);
             count = count + 1;
@@ -27,6 +27,7 @@ public class DestroyCollision : MonoBehaviour {
             GetComponent<AudioSource>().Play();
         }
     }
+
 
     public void resetCount()
     {

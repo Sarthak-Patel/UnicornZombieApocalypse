@@ -12,6 +12,7 @@ public class StartGame : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     Button _button;
     float timeElapsed;
     Image cursor;
+    public GameObject myObject;
     // Use this for initialization
     void Awake()
     {
@@ -31,6 +32,7 @@ public class StartGame : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             {
                 timeElapsed = 0;
                 _button.onClick.Invoke();
+                myObject.transform.position = new Vector3(0, 3, 0);
                 isEntered = false;
             }
         }

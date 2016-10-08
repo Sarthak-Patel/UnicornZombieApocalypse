@@ -24,4 +24,10 @@ public class DestroyCollision : MonoBehaviour {
             GetComponent<AudioSource>().Play();
         }
     }
+
+    public void resetCount()
+    {
+        count = 0;
+        countText.text = "Count: " + count.ToString();
+    }
 }

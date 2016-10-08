@@ -5,30 +5,17 @@ public class zombie_move : MonoBehaviour {
 	
 	public Transform target;
 	public float speed;
-	public Camera m_Camera;
-
-
-
-	// Use this for initialization
-	void Start () {
-
-		// spawn randomly
-		const int HEIGHT = 2;
-		int x = Random.Range(300,500);
-		int z = Random.Range(300,500);
-
-		transform.position = new Vector3(x,HEIGHT,z);
-
-
-	}
 
 	void Update() {		
-		// move towards player
-		float step = speed * Time.deltaTime;
-		transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+		// emulates player moving past zombie
+		Vector3 direction = speed*(target.forward+target.right);
+		transform.position = transform.position - direction;
 
 		// face player
-		transform.LookAt(transform.position + m_Camera.transform.rotation * Vector3.forward,m_Camera.transform.rotation * Vector3.up);
+		Vector3 targetPostition = new Vector3( target.position.x, 
+                                        this.transform.position.y, 
+                                        target.position.z ) ;
+ 		this.transform.LookAt( targetPostition ) ;
 
 	}
 }

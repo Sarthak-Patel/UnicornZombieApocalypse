@@ -15,6 +15,8 @@ public class DestroyCollision : MonoBehaviour {
         count = 0;
         countText.text = "Count: " + count.ToString();
         countText2.text = "Final Score: " + count.ToString();
+        DontDestroyOnLoad(countText2);
+        DontDestroyOnLoad(countText);
     }
 	void OnCollisionEnter(Collision col)
     {

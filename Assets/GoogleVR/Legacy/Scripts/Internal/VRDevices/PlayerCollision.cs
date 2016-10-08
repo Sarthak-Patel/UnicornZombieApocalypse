@@ -19,7 +19,7 @@ public class PlayerCollision : MonoBehaviour {
         if(col.gameObject.name == "Hitbox")
         {
             GetComponent<AudioSource>().Play();
-            Object1.transform.position = new Vector3(-39, 4, 110);
+            Object1.transform.position = new Vector3(-37, 4, 111);
             Spawner.SetActive(false);
             Zombie.SetActive(false);
         }

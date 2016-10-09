@@ -7,9 +7,9 @@ public class spawner : MonoBehaviour {
 	private int z;
 
 	const int SMOKE_RAD = 60;
-	int WAIT_TIME = 6;
+	int WAIT_TIME = 3;
 	float timeLeft = 180.0f;
-	float HardSpeed = 12.0f;
+	float HardSpeed = 5.0f;
 
 	// Use this for initialization
 	void Start () {

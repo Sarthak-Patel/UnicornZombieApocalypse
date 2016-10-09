@@ -27,6 +27,8 @@ public class DestroyCollision : MonoBehaviour {
             countText.text = "Count: " + count.ToString ();
             countText2.text = "Final Score: " + count.ToString();
             GetComponent<AudioSource>().Play();
+            DontDestroyOnLoad(countText);
+            DontDestroyOnLoad(countText2);
         }
     }
 

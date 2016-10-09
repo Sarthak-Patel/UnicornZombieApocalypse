@@ -3,12 +3,14 @@ using System.Collections;
 
 public class spawner : MonoBehaviour {
 	public Transform Zombie;
-	public float fieldOfView;
 	private int x;
 	private int z;
+
 	const int SMOKE_RAD = 60;
-	const int WAIT_TIME = 2;
-    int j = 0;
+	int WAIT_TIME = 6;
+	float timeLeft = 180.0f;
+	float HardSpeed = 12.0f;
+
 	// Use this for initialization
 	void Start () {
        InvokeRepeating("Spawn", WAIT_TIME, WAIT_TIME);
@@ -16,8 +18,15 @@ public class spawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		timeLeft -= Time.deltaTime;
 
-		
+		if (timeLeft <= 120)
+			WAIT_TIME = 4;
+		if (timeLeft <= 60) {
+			WAIT_TIME = 2;
+			Zombie.Translate(Vector3.forward * HardSpeed * Time.deltaTime);
+		}
+			
 
 		// wait time in between each spawn wave
 	}

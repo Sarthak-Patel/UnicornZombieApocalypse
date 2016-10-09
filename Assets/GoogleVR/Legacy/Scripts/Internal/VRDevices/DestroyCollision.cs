@@ -20,7 +20,7 @@ public class DestroyCollision : MonoBehaviour {
     }
 	void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.name == "Zombie(Clone)")
+        if(col.gameObject.name == "Zombie(Clone)" || col.gameObject.name == "Zombie2(Clone)" || col.gameObject.name == "Zombie3(Clone)" || col.gameObject.name == "Zombie4(Clone)" || col.gameObject.name == "Zombie" || col.gameObject.name == "Zombie2" || col.gameObject.name == "Zombie3" || col.gameObject.name == "Zombie4")
         {
             Destroy(col.gameObject);
             count = count + 1;
